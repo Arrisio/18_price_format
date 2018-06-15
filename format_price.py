@@ -3,8 +3,9 @@ import argparse
 
 def format_price(price):
     if isinstance(price, str):
-        price = price.replace(',', '.')
         price = price.replace(' ', '')
+    else:
+        price = str(price)
 
     try:
         return (
